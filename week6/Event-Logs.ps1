@@ -1,9 +1,7 @@
 ﻿. (Join-Path $PSScriptRoot String-Helper.ps1)
 
 
-<# ******************************
-     Function Explaination
-****************************** #>
+
 function getLogInAndOffs($timeBack){
 
 $loginouts = Get-EventLog system -source Microsoft-Windows-Winlogon -After (Get-Date).AddDays("-"+"$timeBack")
